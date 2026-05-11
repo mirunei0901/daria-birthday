@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pentru iubita mea | Zi de naștere</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Quicksand:wght@300;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #d81b60;
+            --soft-pink: #fce4ec;
+            --accent: #ad1457;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Quicksand', sans-serif;
+            background-color: var(--soft-pink);
+            scroll-behavior: smooth;
+        }
+
+        /* --- Ecran de Blocare --- */
+        #lock-screen {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: white;
+            position: fixed;
+            width: 100%;
+            z-index: 999;
+            transition: 0.8s ease-in-out;
+        }
+
+        .lock-box {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 20px;
+        }
+
+        input {
+            padding: 12px;
+            border: 2px solid var(--soft-pink);
+            border-radius: 10px;
+            width: 220px;
+            text-align: center;
+            font-size: 1.1rem;
+            outline: none;
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover { background: var(--accent); }
+
+        /* --- Conținut Principal --- */
+        #content {
+            display: none;
+            opacity: 0;
+            transition: 1s;
+        }
+
+        section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 20px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        h1, h2 {
+            font-family: 'Dancing Script', cursive;
+            color: var(--primary);
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            line-height: 1.8;
+            font-size: 1.25rem;
+            max-width: 750px;
+            color: #444;
+        }
+
+        .flag-container {
+            font-size: 2.5rem;
+            margin: 20px 0;
+        }
+
+        .page-1 { background: #ffffff; }
+        .page-2 { background: #fff5f8; border-top: 2px solid #eee; }
+        .page-3 { background: #fce4ec; border-top: 2px solid #eee; }
+
+        .heart-icon {
+            color: var(--primary);
+            font-size: 3rem;
+            animation: beat 1s infinite alternate;
+        }
+
+        @keyframes beat {
+            to { transform: scale(1.2); }
+        }
+
+        .divider {
+            width: 50px;
+            height: 2px;
+            background: var(--primary);
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ECRANUL DE BLOCARE -->
+    <div id="lock-screen">
+        <div class="lock-box">
+            <div class="heart-icon">❤️</div>
+            <h2>Doar pentru Daria</h2>
+            <p>Introdu data aniversării noastre (DD.MM.YYYY)</p>
+            <input type="text" id="pass" placeholder="DD.MM.YYYY">
+            <br>
+            <button class="btn" onclick="unlock()">Deschide Inima</button>
+            <p id="error-msg" style="color: #d81b60; font-size: 0.9rem; display:none; margin-top: 10px;">
+                Încearcă din nou, iubito! (Hint: 01.03.2026)
+            </p>
+        </div>
+    </div>
+
+    <div id="content">
+        <!-- PAGINA 1: INTRODUCERE -->
+        <section class="page-1">
+            <h1>La mulți ani, Daria!</h1>
+            <div class="flag-container">Feliz cumpleaños, amor mío!❤️</div>
+            <p>
+                Astăzi sărbătorim ziua ta de naștere si aproximativ 3 luni de când suntem împreună. 
+                De la străzile din Constanța până la soarele Bucureștiului, niciun drum nu a fost 
+                prea lung pentru a ajunge la tine. Nu am zis niciodată ca va fi ușor dar tu meriți tot efortul.
+            </p>
+            <div class="divider"></div>
+            <p><i>Mergi mai jos pentru surpriză...</i></p>
+        </section>
+
+        <!-- PAGINA 2: DESPRE EA -->
+        <section class="page-2">
+            <h2>Și dacă și în acest moment te mai întrebi...</h2>
+            <p>
+               Da, te iubesc nespus de mult; Da, te iubesc și dacă ai fi o piatră/râmă sau orice ai mai putea fi. Dacă te întrebi și de ce... iubesc felul în care mă faci să mă simt viu, ca și cum lumea își schimbă ritmul doar când îți aud vocea. Te iubesc pentru că în privirea ta găsesc liniște, dar și un fel de nebunie frumoasă care mă împinge să fiu mai bun, să vreau sa devin mai bun pentru tine. Pentru că râsul tău îmi rămâne în minte ore întregi, iar gesturile tale mici au o căldură pe care nu o pot explica în cuvinte simple. Te iubesc fiindcă lângă tine totul pare mai ușor, mai adevărat, mai plin de viață. Și poate cel mai mult te iubesc pentru că, fără să încerci, îmi amintești în fiecare zi cât de frumoasă poate fi lumea atunci când o privesc prin tine.
+            </p>
+            <p> Te iubesc mult mai mult decât o să pot să afișez și chiar nu o să am mereu cuvintele la mine, o să îți demontrez prin timp și fapte. Mereu o să fiu aici pentru tine, să te ascult, să te susțin sau doar să fiu un umăr pe care să plângi.
+
+            </p>
+            <div class="heart-icon" style="font-size: 1.5rem;">❣️</div>
+        </section>
+
+        <!-- PAGINA 3: PROMISIUNEA -->
+        <section class="page-3">
+            <h2>Viitorul Nostru</h2>
+            <p>
+                Sper să ai o zi de naștere superbă, să ți se îndeplinească toate visele si chiar să ajungi unde doresti. Mai doresc să îți reamintesc că acesta este doar primul capitol dintr-o poveste lungă și frumoasă. 
+                Îți mulțumesc pentru fiecare moment, pentru fiecare mesaj și pentru 
+                toată dragostea pe care mi-o oferi în fiecare zi.
+            </p>
+            <p>
+                Abia aștept să văd ce ne este promis și cum o să evolueze tot. Indiferent unde ne va purta viața, 
+                îmi doresc să te am alături și să îți fiu alături. Și să îți fac rost de acele gaini :)) .🐔
+            </p>
+            <div class="heart-icon" style="margin-top: 30px;">🌹</div>
+            <p><strong>Te iubesc enorm, Daria!</strong></p>
+            <p style="font-size: 1rem; color: var(--accent); font-weight: bold;">Al tău pentru totdeauna, Răzvan/fraieru(🤍). La mulți ani, iubire!</p>
+        </section>
+    </div>
+
+    <script>
+        function unlock() {
+            const entry = document.getElementById('pass').value;
+            // Parola ceruta de tine
+            if (entry === "01.03.2026") {
+                const lock = document.getElementById('lock-screen');
+                lock.style.opacity = '0';
+                setTimeout(() => {
+                    lock.style.display = 'none';
+                    const mainContent = document.getElementById('content');
+                    mainContent.style.display = 'block';
+                    setTimeout(() => mainContent.style.opacity = '1', 100);
+                }, 800);
+            } else {
+                document.getElementById('error-msg').style.display = 'block';
+            }
+        }
+
+        // Permite apăsarea tastei Enter
+        document.getElementById("pass").addEventListener("keyup", function(event) {
+            if (event.key === "Enter") unlock();
+        });
+    </script>
+</body>
+</html>
